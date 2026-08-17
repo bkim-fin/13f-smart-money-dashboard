@@ -1,0 +1,251 @@
+{
+  "updated_at": "2026-08-17",
+  "note": "Q2 2026 13F filing window 반영. 보유 기준일은 2026-06-30이며, 공시 확인은 2026-08-14 전후. 13F는 실제 매수일이 아니라 분기말 long equity 보유 스냅샷이다.",
+  "riskMode": {
+    "score": 64,
+    "label": "Balanced+",
+    "note": "기관 자금은 AI/반도체, 플랫폼 빅테크, 결제/데이터 인프라로 재강화. 단, 13F 지연과 밸류에이션 부담 때문에 현금 완전 축소는 부적절"
+  },
+  "kpis": [
+    { "label": "Latest 13F", "metric": "Q2 2026", "note": "보유 기준 2026-06-30 / 공시 2026-08-14 전후" },
+    { "label": "Strongest Signal", "metric": "AI + Quality", "note": "GOOGL, MSFT, NVDA, AVGO, V, MA" },
+    { "label": "Risk Mode", "metric": "risk", "note": "" },
+    { "label": "Next Check", "metric": "Nov", "note": "Q3 2026 13F 반영" }
+  ],
+  "signalBars": [
+    { "name": "AI 인프라/반도체", "score": 93, "color": "blue" },
+    { "name": "플랫폼 빅테크", "score": 87, "color": "green" },
+    { "name": "퀄리티 금융/결제", "score": 72, "color": "violet" },
+    { "name": "에너지/전력/원자재", "score": 52, "color": "amber" },
+    { "name": "고밸류 소프트웨어", "score": 35, "color": "red" }
+  ],
+  "allocations": [
+    { "asset": "미국 주식", "range": "60~70%", "color": "green" },
+    { "asset": "AI 위성", "range": "10~15%", "color": "blue" },
+    { "asset": "금/원자재", "range": "5~10%", "color": "amber" },
+    { "asset": "현금/단기채", "range": "10~20%", "color": "violet" }
+  ],
+  "checklist": [
+    { "status": "green", "title": "Q2 13F 반영", "text": "신규/확대/축소/전량 매도 시그널 갱신 완료" },
+    { "status": "blue", "title": "월간 검증", "text": "AI·반도체 랠리가 실적 revision과 같이 가는지 확인" },
+    { "status": "amber", "title": "리스크", "text": "GOOGL·NVDA·AVGO 과열, 장기금리, 시장 폭 축소 체크" },
+    { "status": "red", "title": "금지", "text": "13F 공시 직후 갭상승 종목 추격매수 금지" }
+  ],
+  "rows": [
+    {
+      "type": "buy",
+      "ticker": "GOOGL/GOOG",
+      "symbols": ["GOOGL", "GOOG"],
+      "name": "Alphabet",
+      "sector": "Platform/AI",
+      "houses": "Berkshire Hathaway, Bridgewater, Tiger Global",
+      "move": "대형 신규/확대 편입",
+      "reason": "Berkshire가 Alphabet을 대규모로 늘렸고, 여러 대형 운용사도 AI 인프라와 검색/클라우드 현금흐름을 함께 평가",
+      "guide": "Core 후보로 승격. 단, AI 검색 경쟁과 규제 리스크 때문에 단일 과집중은 피함",
+      "confidence": "높음",
+      "basis": "13F 보유 기준: 2026-06-30<br>공시 확인: 2026-08-14 전후"
+    },
+    {
+      "type": "buy",
+      "ticker": "MSFT",
+      "symbols": ["MSFT"],
+      "name": "Microsoft",
+      "sector": "AI/Software",
+      "houses": "Pershing, Bridgewater, Tiger Global",
+      "move": "공통 핵심 보유/확대",
+      "reason": "AI 인프라, 클라우드, 엔터프라이즈 소프트웨어가 결합된 방어적 성장 자산으로 기관 컨센서스 유지",
+      "guide": "Core 유지. 밸류에이션 부담이 있으면 신규 자금은 분할 접근",
+      "confidence": "높음",
+      "basis": "13F 보유 기준: 2026-06-30<br>공시 확인: 2026-08-14 전후"
+    },
+    {
+      "type": "buy",
+      "ticker": "NVDA/AVGO",
+      "symbols": ["NVDA", "AVGO"],
+      "name": "NVIDIA / Broadcom",
+      "sector": "Semiconductor",
+      "houses": "Bridgewater, Tiger Global, Coatue",
+      "move": "AI 반도체 재강화",
+      "reason": "Q2 13F 집계에서 AI 칩과 네트워킹/ASIC 레이어 매수 강도가 유지. 단일 GPU보다 AI 스택 전반으로 확산",
+      "guide": "위성 포지션. NVDA 단일주보다 SMH, AVGO, TSM, MU, AMAT를 섞는 방식 선호",
+      "confidence": "높음",
+      "basis": "13F 보유 기준: 2026-06-30<br>공시 확인: 2026-08-14 전후"
+    },
+    {
+      "type": "buy",
+      "ticker": "TSM/MU/AMAT/ASML",
+      "symbols": ["TSM", "MU", "AMAT", "ASML"],
+      "name": "AI Supply Chain Basket",
+      "sector": "Semiconductor Equipment",
+      "houses": "Tiger Global, Coatue, large 13F aggregate",
+      "move": "공급망 바스켓 확대",
+      "reason": "파운드리, 메모리, 장비로 매수세가 확산. AI capex가 GPU 이후 병목 자산으로 번지는 흐름",
+      "guide": "개별주보다 바스켓 또는 ETF 접근. 메모리 사이클 변동성은 별도 관리",
+      "confidence": "중상",
+      "basis": "13F 보유 기준: 2026-06-30<br>공시 확인: 2026-08-14 전후"
+    },
+    {
+      "type": "buy",
+      "ticker": "V/MA",
+      "symbols": ["V", "MA"],
+      "name": "Visa / Mastercard",
+      "sector": "Quality Financials",
+      "houses": "Pershing Square",
+      "move": "신규 편입",
+      "reason": "Pershing이 결제 네트워크를 새로 편입. 저자본·고마진·네트워크 효과가 강한 퀄리티 금융으로 자금이 이동",
+      "guide": "Core 보조 후보. 경기 둔화보다 규제와 결제 수수료 압박을 더 중요하게 점검",
+      "confidence": "높음",
+      "basis": "13F 보유 기준: 2026-06-30<br>공시 확인: 2026-08-14 전후"
+    },
+    {
+      "type": "buy",
+      "ticker": "SPGI/ICE",
+      "symbols": ["SPGI", "ICE"],
+      "name": "S&P Global / Intercontinental Exchange",
+      "sector": "Financial Data",
+      "houses": "Pershing Square",
+      "move": "신규 편입",
+      "reason": "데이터, 지수, 거래소, 클리어링 인프라처럼 반복 매출과 가격결정력이 있는 금융 인프라 선호가 강화",
+      "guide": "퀄리티 위성 후보. 금리 급등 시 멀티플 압축 가능성은 관리",
+      "confidence": "중상",
+      "basis": "13F 보유 기준: 2026-06-30<br>공시 확인: 2026-08-14 전후"
+    },
+    {
+      "type": "buy",
+      "ticker": "NFLX",
+      "symbols": ["NFLX"],
+      "name": "Netflix",
+      "sector": "Platform/Consumer",
+      "houses": "Pershing Square, ARK Invest",
+      "move": "신규 저가매수 신호",
+      "reason": "주가 부진 이후 Pershing이 재편입. 스트리밍 승자와 광고/AI 추천 엔진 개선을 보는 저가매수 성격",
+      "guide": "위성 후보. 가입자 성장 둔화와 콘텐츠 비용 리스크 때문에 Core 편입은 신중",
+      "confidence": "중간",
+      "basis": "13F 보유 기준: 2026-06-30<br>공시 확인: 2026-08-14 전후"
+    },
+    {
+      "type": "buy",
+      "ticker": "CEG/GEV",
+      "symbols": ["CEG", "GEV"],
+      "name": "Constellation Energy / GE Vernova",
+      "sector": "Energy/Power",
+      "houses": "large 13F aggregate",
+      "move": "전력 인프라 관심 확대",
+      "reason": "AI 데이터센터 전력 수요와 원전/전력 장비 테마가 13F 매수 상위권에 등장",
+      "guide": "전술 위성. 유틸리티 규제, 장기 계약, 원전 정책 리스크 확인",
+      "confidence": "중간",
+      "basis": "13F 보유 기준: 2026-06-30<br>공시 확인: 2026-08-14 전후"
+    },
+    {
+      "type": "buy",
+      "ticker": "DHI/LEN",
+      "symbols": ["DHI", "LEN"],
+      "name": "D.R. Horton / Lennar",
+      "sector": "Housing/Cyclical",
+      "houses": "Berkshire Hathaway",
+      "move": "주택건설 익스포저 확대",
+      "reason": "Berkshire가 주택건설 관련 포지션을 늘림. 금리 안정 또는 주택 공급 부족에 대한 경기민감 가치 베팅",
+      "guide": "경기민감 위성. 모기지 금리 재상승 시 빠르게 훼손될 수 있음",
+      "confidence": "중간",
+      "basis": "13F 보유 기준: 2026-06-30<br>공시 확인: 2026-08-14 전후"
+    },
+    {
+      "type": "sell",
+      "ticker": "BAC/COF/ALLY",
+      "symbols": ["BAC", "COF", "ALLY"],
+      "name": "Legacy Financials",
+      "sector": "Financials",
+      "houses": "Berkshire Hathaway",
+      "move": "비중 축소",
+      "reason": "Berkshire가 일부 은행/소비자금융 익스포저를 줄임. 퀄리티 결제/데이터 금융과 레거시 금융의 선호도 차이가 커짐",
+      "guide": "은행 단일주 추격보다 XLF 또는 퀄리티 금융 위주 접근",
+      "confidence": "중상",
+      "basis": "13F 보유 기준: 2026-06-30<br>공시 확인: 2026-08-14 전후"
+    },
+    {
+      "type": "sell",
+      "ticker": "KR/NUE/STZ",
+      "symbols": ["KR", "NUE", "STZ"],
+      "name": "Legacy Value Basket",
+      "sector": "Value/Defensive",
+      "houses": "Berkshire Hathaway",
+      "move": "축소/전량 매도",
+      "reason": "Berkshire가 일부 식료품, 철강, 주류 포지션을 줄이거나 정리. 자본이 AI 플랫폼·주택·항공 쪽으로 이동",
+      "guide": "단순 저PER 가치주보다 구조적 성장 또는 명확한 현금흐름 개선이 있는 종목만 선별",
+      "confidence": "중간",
+      "basis": "13F 보유 기준: 2026-06-30<br>공시 확인: 2026-08-14 전후"
+    },
+    {
+      "type": "watch",
+      "ticker": "GLD/GDX",
+      "symbols": ["GLD", "GDX"],
+      "name": "Gold / Gold Miners",
+      "sector": "Commodity",
+      "houses": "13F 직접 신호 제한",
+      "move": "보험 포지션 유지",
+      "reason": "Q2 13F의 강한 주식 위험선호에도 금은 실질금리·달러·지정학 리스크 헤지로 역할 유지",
+      "guide": "금 5~8% 보험 비중 유지. 금광주는 변동성이 커서 소액 위성으로 제한",
+      "confidence": "중간",
+      "basis": "13F 보유 기준: 2026-06-30<br>공시 확인: 2026-08-14 전후"
+    }
+  ],
+  "calendar": [
+    {
+      "date": "매주",
+      "task": "가격·금리·원자재 체크",
+      "question": "AI 리더십이 실적과 같이 가는지, 장기금리가 다시 뛰는지?",
+      "action": "신규 자금은 분할, 과열 종목은 추격 회피"
+    },
+    {
+      "date": "매월 말",
+      "task": "섹터 ETF 상대강도 확인",
+      "question": "SMH/XLK에서 XLF/XLI/XLE로 자금이 확산되는지?",
+      "action": "Satellite만 조정"
+    },
+    {
+      "date": "2026-11-14~17",
+      "task": "Q3 2026 13F 업데이트",
+      "question": "Q2의 GOOGL, V/MA, SPGI/ICE, AI 반도체 매수가 반복됐나?",
+      "action": "2분기 연속 매수는 Core 후보로 승격"
+    }
+  ],
+  "sources": [
+    { "name": "SEC 13F FAQ", "url": "https://www.sec.gov/rules-regulations/staff-guidance/frequently-asked-questions-about-form-13f" },
+    { "name": "AP Berkshire Q2 2026", "url": "https://apnews.com/article/fd9d6750d34f208c338e305759bcf6c9" },
+    { "name": "Kiplinger Berkshire Q2 2026", "url": "https://www.kiplinger.com/investing/stocks/stocks-berkshire-hathaway-bought-sold-q2-2026" },
+    { "name": "Barron's Pershing Q2 2026", "url": "https://www.barrons.com/articles/bill-ackman-pershing-square-investing-e4c21f3e" },
+    { "name": "MarketWatch Pershing Q2 2026", "url": "https://www.marketwatch.com/story/bill-ackman-once-exited-his-netflix-stake-in-a-huff-why-hes-buying-the-streaming-giant-again-as-well-as-these-five-stocks-ae0d9220" }
+  ],
+  "factChecks": [
+    {
+      "item": "Q2 2026 기준 시점",
+      "status": "확인됨",
+      "evidence": "Q2 2026 13F는 2026-06-30 보유분이며, 2026-08-14 전후 공시 사이클에서 확인.",
+      "caveat": "13F는 실제 매수일과 현재 보유 여부를 보여주지 않는다."
+    },
+    {
+      "item": "Berkshire의 Alphabet 확대",
+      "status": "확인됨",
+      "evidence": "AP와 Kiplinger는 Berkshire가 Q2에 Alphabet 보유를 대폭 늘렸다고 보도.",
+      "caveat": "Berkshire 전체 포트폴리오에는 비상장·현금·보험 사업이 포함되어 13F만으로 전체 판단은 불완전."
+    },
+    {
+      "item": "Pershing 신규 6종목",
+      "status": "확인됨",
+      "evidence": "Barron's와 MarketWatch는 Pershing의 Netflix, ICE, Visa, Mastercard, S&P Global, Alcon 신규 편입을 보도.",
+      "caveat": "Ackman의 설명은 장기 논리이나 공시 이후 가격 반응은 단기 과열일 수 있음."
+    },
+    {
+      "item": "AI/반도체 매수 강도",
+      "status": "확인됨",
+      "evidence": "Q2 13F 집계와 주요 매니저 보도에서 NVDA, AVGO, TSM, MU, AMAT, ASML 등 AI 공급망 매수 흐름 확인.",
+      "caveat": "일부 매니저는 같은 종목을 축소했으므로 컨센서스가 일방향이라는 뜻은 아님."
+    },
+    {
+      "item": "Risk Mode 64",
+      "status": "해석",
+      "evidence": "Q2 13F상 주식 위험선호와 퀄리티 성장 매수가 강화된 점을 반영.",
+      "caveat": "공시 지연과 밸류에이션 부담 때문에 공격 모드로 보기는 어렵다."
+    }
+  ]
+}
