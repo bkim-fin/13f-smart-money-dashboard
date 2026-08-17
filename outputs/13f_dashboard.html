@@ -650,6 +650,251 @@
       .bar-row { grid-template-columns: 110px minmax(0, 1fr) 44px; }
       .allocation { grid-template-columns: 92px minmax(0, 1fr) 58px; }
     }
+
+    /* Slow Down Creative-inspired editorial theme */
+    :root {
+      --bg: #f8f5ec;
+      --panel: #fffaf0;
+      --ink: #2f302c;
+      --muted: #766f64;
+      --line: #d9cfbd;
+      --soft: #eee4d2;
+      --blue: #284d76;
+      --green: #2f6f5f;
+      --red: #b84d42;
+      --amber: #c98d2f;
+      --violet: #6e5b8f;
+      --slate: #2f302c;
+      --shadow: none;
+      --shadow-soft: none;
+    }
+
+    body {
+      background:
+        linear-gradient(180deg, #fbf8ef 0, #f8f5ec 310px),
+        var(--bg);
+    }
+
+    .shell {
+      max-width: 1500px;
+      padding: 30px;
+    }
+
+    .topbar {
+      min-height: 250px;
+      align-items: center;
+      padding: 42px 0 34px;
+      border-bottom: 1px solid var(--ink);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      max-width: 780px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 6vw, 76px);
+      font-weight: 400;
+      line-height: .96;
+    }
+
+    .subtitle {
+      max-width: 680px;
+      margin-top: 18px;
+      font-size: 16px;
+      color: #4e4a43;
+    }
+
+    .source-row {
+      align-self: start;
+      padding-top: 8px;
+    }
+
+    .link-btn,
+    .tab,
+    .icon-btn {
+      border-color: var(--ink);
+      background: transparent;
+      color: var(--ink);
+      border-radius: 999px;
+      min-height: 38px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .link-btn.primary,
+    .tab.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: #fffaf0;
+    }
+
+    .panel,
+    .card,
+    .summary-item {
+      background: rgba(255, 250, 240, .86);
+      border-color: var(--ink);
+      box-shadow: none;
+    }
+
+    .card {
+      min-height: 142px;
+      padding: 18px;
+    }
+
+    .card::before {
+      height: 6px;
+      background: #f0b869;
+    }
+
+    .card:nth-child(2)::before { background: #9cc7bd; }
+    .card:nth-child(3)::before { background: #d96e58; }
+    .card:nth-child(4)::before { background: #cab1da; }
+
+    .metric,
+    .risk-value strong {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+    }
+
+    .label,
+    th,
+    .note,
+    .stock-name,
+    .trend-meta,
+    .house-cell,
+    .basis-text {
+      letter-spacing: .02em;
+    }
+
+    .summary-strip {
+      gap: 12px;
+    }
+
+    .summary-item {
+      min-height: 104px;
+      padding: 16px;
+    }
+
+    .summary-item strong,
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+    }
+
+    .layout {
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    .sidebar {
+      top: 20px;
+      background: #f3ead8;
+    }
+
+    select {
+      border-color: var(--ink);
+      background: #fffaf0;
+      border-radius: 999px;
+      color: var(--ink);
+    }
+
+    .panel {
+      padding: 20px;
+    }
+
+    .panel-title {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+    }
+
+    .table-wrap {
+      border-color: var(--ink);
+      background: #fffaf0;
+    }
+
+    th {
+      background: #f3ead8;
+      color: var(--ink);
+    }
+
+    td {
+      border-bottom-color: #e6dac6;
+    }
+
+    tbody tr:hover {
+      background: #f6eddd;
+    }
+
+    th:last-child,
+    td:last-child {
+      background: #fffaf0;
+    }
+
+    th:last-child {
+      background: #f3ead8;
+    }
+
+    .sector-chip,
+    .pill,
+    .basis-text {
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fbf3e5;
+    }
+
+    .pill.buy {
+      background: #e5f0e7;
+      color: #27644f;
+      border-color: #bfd8ca;
+    }
+
+    .pill.sell {
+      background: #f6ded8;
+      color: #a33e34;
+      border-color: #e5bbb2;
+    }
+
+    .pill.watch {
+      background: #f7e6bc;
+      color: #8a5a15;
+      border-color: #e4c677;
+    }
+
+    .pill.neutral {
+      background: #ece5d8;
+      color: #4e4a43;
+      border-color: #d4c7b4;
+    }
+
+    .bar-track,
+    .confidence-track {
+      background: #e7dcc9;
+    }
+
+    .risk-track {
+      background: linear-gradient(90deg, #78a68d 0%, #e3bd66 55%, #c9604e 100%);
+    }
+
+    @media (max-width: 1000px) {
+      .topbar {
+        min-height: auto;
+        padding-top: 28px;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell { padding: 16px; }
+      h1 { font-size: clamp(36px, 14vw, 54px); }
+      .topbar { padding-bottom: 24px; }
+      .source-row { gap: 7px; }
+      .link-btn { min-height: 34px; padding: 7px 10px; }
+      .summary-item { min-height: auto; }
+    }
   </style>
 </head>
 <body>
