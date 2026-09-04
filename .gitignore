@@ -1,3 +1,4 @@
 outputs/.venv/
 outputs/__pycache__/
+work/private/
 .DS_Store

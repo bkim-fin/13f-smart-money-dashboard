@@ -34,6 +34,8 @@ TICKERS = [
     "NUE",
     "STZ",
     "CVX",
+    "XLE",
+    "USO",
     "GLD",
     "GDX",
 ]
