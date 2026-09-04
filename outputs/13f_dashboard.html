@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>13F Smart Money Dashboard</title>
+  <title>Smart Money Dashboard</title>
   <style>
     :root {
       --bg: #f6f7f9;
@@ -656,13 +656,10 @@
   <main class="shell">
     <section class="topbar">
       <div>
-        <h1>13F Smart Money Dashboard</h1>
-        <p class="subtitle" id="subtitleText">분기별 13F 공시를 기반으로 공통 신규 매수, 전량 매도, 섹터 축소 이유, 현금/주식/원자재 가이드를 추적합니다.</p>
+        <h1>Smart Money Dashboard</h1>
+        <p class="subtitle" id="subtitleText">선택된 하우스의 공통 신규 매수, 전량 매도, 섹터 축소 이유, 현금/주식/원자재 가이드를 추적합니다.</p>
       </div>
       <div class="source-row">
-        <a class="link-btn" href="https://www.sec.gov/edgar/search/" target="_blank" rel="noreferrer">SEC EDGAR</a>
-        <a class="link-btn" href="https://holdlens.com/quarterly/2026-q1/" target="_blank" rel="noreferrer">Q1 2026 Recap</a>
-        <a class="link-btn" href="https://www.nasdaq.com/articles/may-2026-review-and-outlook" target="_blank" rel="noreferrer">Market Backdrop</a>
         <button class="link-btn primary" id="factCheckBtn">팩트체크</button>
         <button class="link-btn lang" id="languageBtn">EN</button>
       </div>
@@ -673,11 +670,11 @@
     <section class="summary-strip">
       <div class="summary-item">
         <strong id="summaryCurrentTitle">현재 읽기</strong>
-        <span class="note" id="summaryCurrentText">Q2 13F는 AI/반도체와 퀄리티 금융으로 자금이 재강화된 흐름을 보여줍니다.</span>
+        <span class="note" id="summaryCurrentText">Q2 분기 데이터는 AI/반도체와 퀄리티 금융으로 자금이 재강화된 흐름을 보여줍니다.</span>
       </div>
       <div class="summary-item">
         <strong id="summaryNextTitle">다음 확인</strong>
-        <span class="note" id="summaryNextText">Q3 13F에서 GOOGL, V/MA, SPGI/ICE, AI 반도체 매수가 반복되는지.</span>
+        <span class="note" id="summaryNextText">Q3 분기 데이터에서 GOOGL, V/MA, SPGI/ICE, AI 반도체 매수가 반복되는지.</span>
       </div>
       <div class="summary-item">
         <strong id="summaryDefenseTitle">방어 장치</strong>
@@ -743,7 +740,7 @@
         <div class="panel hidden" id="factCheckPanel">
           <div class="panel-title">
             <h2 id="factCheckTitle">팩트체크 로그</h2>
-            <span class="pill neutral" id="factCheckBadge">출처 확인 / 해석 분리</span>
+            <span class="pill neutral" id="factCheckBadge">근거 확인 / 해석 분리</span>
           </div>
           <div class="table-wrap">
             <table>
@@ -791,17 +788,17 @@
       asOf: "2026-06-08",
       latest13f: "Q1 2026 / holdings as of 2026-03-31",
       filingWindow: "2026-05-15 전후",
-      nextWindow: "Q2 2026 13F: 2026-08-14~17 전후",
+      nextWindow: "Q2 2026 분기 데이터: 2026-08-14~17 전후",
       riskMode: {
         score: 58,
         label: "Balanced",
         note: "주식은 유지하되 현금/금 방어를 같이 둔다"
       },
       kpis: [
-        { label: "Latest 13F", metric: "Q1 2026", note: "공시 기준 2026-05-15 전후" },
+        { label: "Latest 분기 데이터", metric: "Q1 2026", note: "공시 기준 2026-05-15 전후" },
         { label: "Strongest Signal", metric: "AI Stack", note: "MSFT, AMZN, TSM, AVGO, AMAT" },
         { label: "Risk Mode", metric: "risk", note: "" },
-        { label: "Next Check", metric: "Aug", note: "Q2 2026 13F 반영" }
+        { label: "Next Check", metric: "Aug", note: "Q2 2026 분기 데이터 반영" }
       ],
       signalBars: [
         { name: "AI 인프라/반도체", score: 88, color: "blue" },
@@ -817,10 +814,10 @@
         { asset: "현금/단기채", range: "15~25%", color: "violet" }
       ],
       checklist: [
-        { status: "green", title: "분기 13F", text: "공시 직후 신규/전량 매도/상위 비중 변화 확인" },
+        { status: "green", title: "분기 분기 데이터", text: "공시 직후 신규/전량 매도/상위 비중 변화 확인" },
         { status: "blue", title: "월간 검증", text: "섹터 ETF 상대강도, 실적 revision, 금리 확인" },
         { status: "amber", title: "리스크", text: "시장 폭 축소, 30년물 금리, AI 쏠림 과열 체크" },
-        { status: "red", title: "금지", text: "13F 뉴스만 보고 당일 추격매수 금지" }
+        { status: "red", title: "금지", text: "분기 데이터 뉴스만 보고 당일 추격매수 금지" }
       ],
       rows: [
         {
@@ -904,7 +901,7 @@
           houses: "XXX, YYY vs ZZZ",
           move: "매수와 축소가 동시에 관찰",
           reason: "저평가 퀄리티 플랫폼 논리와 AI 검색 리스크가 충돌",
-          guide: "의견 분화 종목. 다음 13F에서 확산 여부 확인",
+          guide: "의견 분화 종목. 다음 분기 데이터에서 확산 여부 확인",
           confidence: "중간"
         },
         {
@@ -983,47 +980,42 @@
         },
         {
           date: "2026-08-14~17",
-          task: "Q2 2026 13F 업데이트",
+          task: "Q2 2026 분기 데이터 업데이트",
           question: "MSFT/AMZN/META/TSM/AVGO 매수가 반복됐나?",
           action: "반복 매수는 Core 후보, 1회성 매수는 Watchlist"
         },
         {
           date: "2026-11-14~17",
-          task: "Q3 2026 13F 업데이트",
+          task: "Q3 2026 분기 데이터 업데이트",
           question: "원자재/에너지/금 ETF 비중이 실제로 늘었나?",
           action: "원자재를 보험에서 수익 포지션으로 올릴지 판단"
         }
       ],
-      sources: [
-        { name: "SEC 13F FAQ", url: "https://www.sec.gov/rules-regulations/staff-guidance/frequently-asked-questions-about-form-13f" },
-        { name: "Public 13F aggregate reference", url: "https://holdlens.com/quarterly/2026-q1/" },
-        { name: "Nasdaq May 2026 Review", url: "https://www.nasdaq.com/articles/may-2026-review-and-outlook" },
-        { name: "Gold market reference", url: "https://www.gold.org/goldhub/research/gold-outlook-2026" }
-      ],
+      sources: [],
       factChecks: [
         {
-          item: "13F 공시 주기",
+          item: "분기 데이터 주기",
           status: "확인됨",
-          evidence: "SEC/Investor.gov 기준: 기관투자자는 분기 종료 후 45일 내 Form 13F를 제출.",
+          evidence: "공개 자료 기준: 대형 기관 보유 데이터는 분기 종료 후 시차를 두고 확인됩니다.",
           caveat: "실시간 보유가 아니라 최대 45일 이상 늦은 스냅샷."
         },
         {
           item: "Q1 2026 기준 시점",
           status: "확인됨",
-          evidence: "Q1 2026 주요 13F는 2026-03-31 보유분, 2026-05-15 전후 공시 사이클.",
+          evidence: "Q1 2026 주요 분기 데이터는 2026-03-31 보유분, 2026-05-15 전후 공시 사이클.",
           caveat: "4~6월 중 이미 변경됐을 수 있음."
         },
         {
           item: "META/MSFT/NVDA/GOOGL 컨센서스",
           status: "확인됨",
-          evidence: "Public 13F aggregate reference 슈퍼인베스터 집계에서 META, MSFT, V, GOOGL, NVDA가 상위 공통 보유.",
+          evidence: "익명 처리된 집계 기준 META, MSFT, V, GOOGL, NVDA가 상위 공통 보유.",
           caveat: "보유자 수 기준이지 모든 하우스가 신규 매수했다는 뜻은 아님."
         },
         {
           item: "XXX의 MSFT 신규 편입",
           status: "확인됨",
-          evidence: "익명 처리된 Q1 2026 13F에서 MSFT가 핵심 신규 포지션으로 확인.",
-          caveat: "편입 사유는 13F에 직접 적히지 않으므로 AI/클라우드 해석은 보조 근거 기반 추론."
+          evidence: "익명 처리된 Q1 2026 분기 데이터에서 MSFT가 핵심 신규 포지션으로 확인.",
+          caveat: "편입 사유는 분기 데이터에 직접 적히지 않으므로 AI/클라우드 해석은 보조 근거 기반 추론."
         },
         {
           item: "익명 하우스의 반도체 스택 확대",
@@ -1034,13 +1026,13 @@
         {
           item: "금/원자재 가이드",
           status: "해석",
-          evidence: "World Gold Council은 금 강세 요인으로 지정학, 달러, 금리, 중앙은행 수요를 제시.",
-          caveat: "13F는 현물 원자재를 직접 보여주지 않아 ETF/관련주로만 간접 확인."
+          evidence: "공개 원자재 시장 자료는 금 강세 요인으로 지정학, 달러, 금리, 중앙은행 수요를 제시.",
+          caveat: "분기 데이터는 현물 원자재를 직접 보여주지 않아 ETF/관련주로만 간접 확인."
         },
         {
           item: "현금 15~25% 가이드",
           status: "해석",
-          evidence: "Nasdaq May 2026 리뷰: AI 중심의 좁은 리더십, 높은 장기금리, S&P 500 forward P/E 부담을 함께 언급.",
+          evidence: "공개 시장 자료는 AI 중심의 좁은 리더십, 높은 장기금리, S&P 500 forward P/E 부담을 함께 언급.",
           caveat: "개인별 투자기간과 손실 허용도에 따라 달라짐."
         }
       ]
@@ -1059,22 +1051,22 @@
     const $ = (selector) => document.querySelector(selector);
 
     const i18n = {
-      "분기별 13F 공시를 기반으로 공통 신규 매수, 전량 매도, 섹터 축소 이유, 현금/주식/원자재 가이드를 추적합니다.": "Tracks common new buys, full exits, sector de-risking, and cash/equity/commodity guidance from quarterly 13F filings.",
+      "선택된 하우스의 공통 신규 매수, 전량 매도, 섹터 축소 이유, 현금/주식/원자재 가이드를 추적합니다.": "Tracks common new buys, full exits, sector de-risking, and cash/equity/commodity guidance from selected houses.",
       "팩트체크": "Fact Check",
       "현재 읽기": "Current Read",
-      "Q2 13F는 AI/반도체와 퀄리티 금융으로 자금이 재강화된 흐름을 보여줍니다.": "Q2 13F filings show renewed flows into AI/semiconductors and quality financials.",
+      "Q2 분기 데이터는 AI/반도체와 퀄리티 금융으로 자금이 재강화된 흐름을 보여줍니다.": "Q2 quarterly data show renewed flows into AI/semiconductors and quality financials.",
       "다음 확인": "Next Check",
-      "Q3 13F에서 GOOGL, V/MA, SPGI/ICE, AI 반도체 매수가 반복되는지.": "Check whether Q3 13F repeats buying in GOOGL, V/MA, SPGI/ICE, and AI semiconductors.",
+      "Q3 분기 데이터에서 GOOGL, V/MA, SPGI/ICE, AI 반도체 매수가 반복되는지.": "Check whether Q3 분기 데이터 repeats buying in GOOGL, V/MA, SPGI/ICE, and AI semiconductors.",
       "방어 장치": "Defensive Buffer",
       "현금/단기채 10~20%, 금/원자재 5~10%를 변동성 완충재로 유지.": "Keep cash/short-term bonds at 10-20% and gold/commodities at 5-10% as volatility buffers.",
       "보유 기준 2026-06-30 / 공시 2026-08-14 전후": "Holdings as of 2026-06-30 / filed around 2026-08-14",
       "GOOGL, MSFT, NVDA, AVGO, V, MA": "GOOGL, MSFT, NVDA, AVGO, V, MA",
-      "Q3 2026 13F 반영": "Q3 2026 13F update",
-      "기관 자금은 AI/반도체, 플랫폼 빅테크, 결제/데이터 인프라로 재강화. 단, 13F 지연과 밸류에이션 부담 때문에 현금 완전 축소는 부적절": "Institutional capital re-accelerated toward AI/semis, platform big tech, and payments/data infrastructure. Still, 13F lag and valuation risk argue against fully cutting cash.",
+      "Q3 2026 분기 데이터 반영": "Q3 2026 quarterly update",
+      "기관 자금은 AI/반도체, 플랫폼 빅테크, 결제/데이터 인프라로 재강화. 단, 분기 데이터 지연과 밸류에이션 부담 때문에 현금 완전 축소는 부적절": "Institutional capital re-accelerated toward AI/semis, platform big tech, and payments/data infrastructure. Still, 분기 데이터 lag and valuation risk argue against fully cutting cash.",
       "현재 판단": "Current View",
       "현금 10~20% 유지": "Keep Cash 10-20%",
       "팩트체크 로그": "Fact-Check Log",
-      "출처 확인 / 해석 분리": "Source Check / Interpretation Split",
+      "근거 확인 / 해석 분리": "Evidence Check / Interpretation Split",
       "업데이트 캘린더": "Update Calendar",
       "다음 핵심 체크: 2026년 11월 중순": "Next Key Check: mid-November 2026",
       "전체": "All",
@@ -1095,7 +1087,7 @@
       "가이드": "Guide",
       "하우스": "House",
       "확신도": "Conviction",
-      "개 시그널 · 13F는 중기 자금 흐름으로 해석": " signals · interpret 13F as medium-term capital flow",
+      "개 시그널 · 분기 데이터는 중기 자금 흐름으로 해석": " signals · interpret quarterly data as medium-term capital flow",
       "가격 데이터 대기": "Price data pending",
       "업데이트됨": "Updated",
       "가격": "Prices",
@@ -1121,10 +1113,10 @@
       "퀄리티 금융/결제": "Quality Financials/Payments",
       "에너지/전력/원자재": "Energy/Power/Commodities",
       "고밸류 소프트웨어": "High-Valuation Software",
-      "Q2 13F 반영": "Q2 13F Reflected",
+      "Q2 분기 데이터 반영": "Q2 Data Reflected",
       "신규/확대/축소/전량 매도 시그널 갱신 완료": "New, increased, reduced, and exit signals updated.",
-      "Q2 13F 유지": "Q2 13F Maintained",
-      "신규 13F 윈도우는 없음. Q2 공통 매수/매도 신호는 유지": "No new 13F filing window. Q2 common buy/sell signals maintained.",
+      "Q2 분기 데이터 유지": "Q2 Data Maintained",
+      "신규 분기 데이터 윈도우는 없음. Q2 공통 매수/매도 신호는 유지": "No new quarterly data window. Q2 common buy/sell signals maintained.",
       "가격 갱신": "Price Updated",
       "7일 가격 그래프를 2026-08-21 실행 기준으로 갱신": "7-day price charts refreshed as of the 2026-08-21 run.",
       "월간 검증": "Monthly Check",
@@ -1134,8 +1126,8 @@
       "리스크 상향": "Risk Raised",
       "10년물 4.7% 부근, 30년물 5%대, 유가 상승으로 기술주 할인율 부담 확대": "10-year yields near 4.7%, 30-year yields above 5%, and rising oil increase discount-rate pressure on tech.",
       "금지": "Avoid",
-      "13F 공시 직후 갭상승 종목 추격매수 금지": "Avoid chasing post-13F gap-ups.",
-      "13F 컨센서스 종목이라도 금리 급등일 추격매수 금지": "Avoid chasing consensus 13F names on rate-spike days.",
+      "분기 데이터 직후 갭상승 종목 추격매수 금지": "Avoid chasing post-분기 데이터 gap-ups.",
+      "공통 시그널 종목이라도 금리 급등일 추격매수 금지": "Avoid chasing consensus 분기 데이터 names on rate-spike days.",
       "대형 신규/확대 편입": "Large new/increased position",
       "공통 핵심 보유/확대": "Common core holding/increase",
       "AI 반도체 재강화": "AI semiconductor exposure reinforced",
@@ -1150,20 +1142,20 @@
       "전술 관찰 상향": "Tactical watch upgraded",
       "XXX가 Alphabet을 대규모로 늘렸고, 여러 대형 운용사도 AI 인프라와 검색/클라우드 현금흐름을 함께 평가": "XXX materially increased Alphabet, while large managers also value its AI infrastructure, search, and cloud cash flows.",
       "AI 인프라, 클라우드, 엔터프라이즈 소프트웨어가 결합된 방어적 성장 자산으로 기관 컨센서스 유지": "Institutional consensus remains around Microsoft as a defensive growth asset combining AI infrastructure, cloud, and enterprise software.",
-      "Q2 13F 집계에서 AI 칩과 네트워킹/ASIC 레이어 매수 강도가 유지. 단일 GPU보다 AI 스택 전반으로 확산": "Q2 13F data shows continued buying in AI chips and networking/ASIC layers, broadening beyond single-GPU exposure.",
+      "Q2 분기 데이터 집계에서 AI 칩과 네트워킹/ASIC 레이어 매수 강도가 유지. 단일 GPU보다 AI 스택 전반으로 확산": "Q2 quarterly data shows continued buying in AI chips and networking/ASIC layers, broadening beyond single-GPU exposure.",
       "위성 포지션 유지. 금리 급등 구간에는 NVDA 단일주보다 SMH, AVGO, TSM, MU, AMAT 분산과 분할 매수 선호": "Maintain satellite exposure. During rate spikes, prefer diversified and staged exposure through SMH, AVGO, TSM, MU, and AMAT over a single NVDA position.",
       "파운드리, 메모리, 장비로 매수세가 확산. AI capex가 GPU 이후 병목 자산으로 번지는 흐름": "Buying broadened into foundry, memory, and equipment names as AI capex spreads into post-GPU bottlenecks.",
       "개별주보다 바스켓 또는 ETF 접근. 장기금리 재상승 시 장비·메모리 고베타 변동성 관리": "Prefer basket or ETF exposure over single names. Manage high-beta equipment and memory volatility if long yields rise again.",
       "XXX이 결제 네트워크를 새로 편입. 저자본·고마진·네트워크 효과가 강한 퀄리티 금융으로 자금이 이동": "XXX added payment networks, suggesting a shift toward capital-light, high-margin quality financials with network effects.",
       "데이터, 지수, 거래소, 클리어링 인프라처럼 반복 매출과 가격결정력이 있는 금융 인프라 선호가 강화": "Preference strengthened for financial infrastructure with recurring revenue and pricing power: data, indices, exchanges, and clearing.",
       "주가 부진 이후 XXX이 재편입. 스트리밍 승자와 광고/AI 추천 엔진 개선을 보는 저가매수 성격": "XXX re-entered after share weakness, treating Netflix as a streaming winner with ad and AI recommendation upside.",
-      "AI 데이터센터 전력 수요와 원전/전력 장비 테마가 13F 매수 상위권에 등장": "AI data-center power demand and nuclear/power-equipment themes appeared in top 13F buy lists.",
-      "AI 데이터센터 전력 수요와 원전/전력 장비 테마가 13F 매수 상위권에 등장. 최근 유가·에너지 강세도 전력 인프라 관심을 보강": "AI data-center power demand and nuclear/power-equipment themes appeared in top 13F buy lists. Recent oil and energy strength reinforces power-infrastructure interest.",
+      "AI 데이터센터 전력 수요와 원전/전력 장비 테마가 공통 매수 상위권에 등장": "AI data-center power demand and nuclear/power-equipment themes appeared in top 분기 데이터 buy lists.",
+      "AI 데이터센터 전력 수요와 원전/전력 장비 테마가 공통 매수 상위권에 등장. 최근 유가·에너지 강세도 전력 인프라 관심을 보강": "AI data-center power demand and nuclear/power-equipment themes appeared in top 분기 데이터 buy lists. Recent oil and energy strength reinforces power-infrastructure interest.",
       "전술 위성 유지. 유틸리티 규제, 장기 계약, 원전 정책과 금리 민감도를 함께 확인": "Maintain as tactical satellite exposure. Monitor utility regulation, long-term contracts, nuclear policy, and rate sensitivity.",
       "XXX가 주택건설 관련 포지션을 늘림. 금리 안정 또는 주택 공급 부족에 대한 경기민감 가치 베팅": "XXX increased homebuilder exposure, a cyclical value bet on rate stabilization or housing supply shortages.",
       "XXX가 일부 은행/소비자금융 익스포저를 줄임. 퀄리티 결제/데이터 금융과 레거시 금융의 선호도 차이가 커짐": "XXX reduced some bank/consumer-finance exposure, widening the preference gap between quality payments/data finance and legacy financials.",
       "XXX가 일부 식료품, 철강, 주류 포지션을 줄이거나 정리. 자본이 AI 플랫폼·주택·항공 쪽으로 이동": "XXX reduced or exited some grocery, steel, and alcohol positions as capital shifted toward AI platforms, housing, and aerospace.",
-      "Q2 13F의 강한 주식 위험선호에도 금은 실질금리·달러·지정학 리스크 헤지로 역할 유지": "Despite stronger equity risk appetite in Q2 13F, gold remains a hedge against real-rate, dollar, and geopolitical risks.",
+      "Q2 분기 데이터의 강한 주식 위험선호에도 금은 실질금리·달러·지정학 리스크 헤지로 역할 유지": "Despite stronger equity risk appetite in Q2 분기 데이터, gold remains a hedge against real-rate, dollar, and geopolitical risks.",
       "장기금리와 유가가 동시에 흔들리는 구간에서 금은 실질금리·달러·지정학 리스크 헤지 역할을 유지": "When long yields and oil move together, gold remains a hedge against real-rate, dollar, and geopolitical risks.",
       "Core 후보로 승격. 단, AI 검색 경쟁과 규제 리스크 때문에 단일 과집중은 피함": "Upgraded to core candidate, but avoid single-name concentration due to AI search competition and regulatory risk.",
       "Core 유지. 밸류에이션 부담이 있으면 신규 자금은 분할 접근": "Keep as core; add new capital gradually if valuation is stretched.",
@@ -1178,10 +1170,10 @@
       "단순 저PER 가치주보다 구조적 성장 또는 명확한 현금흐름 개선이 있는 종목만 선별": "Select only names with structural growth or clear cash-flow improvement, not low-P/E value alone.",
       "금 5~8% 보험 비중 유지. 금광주는 변동성이 커서 소액 위성으로 제한": "Keep gold at 5-8% as insurance; limit gold miners to small satellite exposure.",
       "금 8~12% 완충 비중. 금광주는 변동성이 커서 소액 위성으로 제한": "Keep gold at an 8-12% buffer allocation; limit gold miners to a small satellite position.",
-      "8월 20일 유가 급등과 에너지주 강세가 확인. 13F long equity로는 현물 원유가 보이지 않아 ETF/에너지주로 보조 추적": "The August 20 oil spike and energy-stock strength were confirmed. Because 13F long equity cannot show physical crude, track exposure through ETFs and energy equities.",
+      "8월 20일 유가 급등과 에너지주 강세가 확인. public filings data로는 현물 원유가 보이지 않아 ETF/에너지주로 보조 추적": "The August 20 oil spike and energy-stock strength were confirmed. Because public filings data cannot show physical crude, track exposure through ETFs and energy equities.",
       "Core보다 Tactical. 지정학 프리미엄 완화나 유가 급락 시 빠르게 축소": "Treat as tactical rather than core. Reduce quickly if geopolitical premium fades or oil drops sharply.",
-      "시장 가격 기준: 2026-08-20~21<br>13F 직접 보유 신호: 제한적": "Market price basis: 2026-08-20 to 2026-08-21<br>Direct 13F holding signal: limited",
-      "13F 보유 기준: 2026-06-30<br>공시 확인: 2026-08-14 전후": "13F holding date: 2026-06-30<br>Filing checked: around 2026-08-14",
+      "시장 가격 기준: 2026-08-20~21<br>직접 보유 신호: 제한적": "Market price basis: 2026-08-20 to 2026-08-21<br>Direct 분기 데이터 holding signal: limited",
+      "보유 기준: 2026-06-30<br>공시 확인: 2026-08-14 전후": "분기 데이터 holding date: 2026-06-30<br>Filing checked: around 2026-08-14",
       "매주": "Weekly",
       "가격·금리·원자재 체크": "Check prices, rates, commodities",
       "AI 리더십이 실적과 같이 가는지, 장기금리가 다시 뛰는지?": "Is AI leadership supported by earnings, and are long rates rising again?",
@@ -1194,17 +1186,17 @@
       "SMH/XLK에서 XLF/XLE/GLD로 방어적 확산이 이어지는지?": "Is defensive broadening from SMH/XLK into XLF/XLE/GLD continuing?",
       "Satellite만 조정": "Adjust satellite positions only.",
       "Core는 유지, Satellite와 Tactical만 조정": "Keep core positions; adjust only satellite and tactical exposure.",
-      "Q3 2026 13F 업데이트": "Q3 2026 13F update",
+      "Q3 2026 분기 데이터 업데이트": "Q3 2026 quarterly update",
       "Q2의 GOOGL, V/MA, SPGI/ICE, AI 반도체 매수가 반복됐나?": "Did Q2 buying in GOOGL, V/MA, SPGI/ICE, and AI semis repeat?",
       "2분기 연속 매수는 Core 후보로 승격": "Two consecutive quarters of buying upgrades a name to core candidate.",
       "2분기 연속 매수는 Core 후보, 1회성 매수는 Watchlist 유지": "Two consecutive quarters of buying upgrades a name to core candidate; one-off buying remains watchlist.",
       "Q2 2026 기준 시점": "Q2 2026 reference point",
-      "Q2 2026 13F는 2026-06-30 보유분이며, 2026-08-14 전후 공시 사이클에서 확인.": "Q2 2026 13F reflects holdings as of 2026-06-30 and was checked around the 2026-08-14 filing cycle.",
-      "13F는 실제 매수일과 현재 보유 여부를 보여주지 않는다.": "13F does not show the actual purchase date or current holding status.",
+      "Q2 2026 분기 데이터는 2026-06-30 보유분이며, 2026-08-14 전후 공시 사이클에서 확인.": "Q2 2026 분기 데이터 reflects holdings as of 2026-06-30 and was checked around the 2026-08-14 filing cycle.",
+      "분기 데이터는 실제 매수일과 현재 보유 여부를 보여주지 않는다.": "분기 데이터 does not show the actual purchase date or current holding status.",
       "XXX의 Alphabet 확대": "XXX's Alphabet increase",
-      "공개 13F 및 시장 데이터 소스는 XXX가 Q2에 Alphabet 보유를 대폭 늘렸다고 보도.": "Public 13F and market data sources reported that XXX materially increased Alphabet in Q2.",
+      "공개 시장 데이터는 XXX가 Q2에 Alphabet 보유를 대폭 늘렸다고 보도.": "Public market data reported that XXX materially increased Alphabet in Q2.",
       "XXX 신규 6종목": "XXX's six new positions",
-      "공개 13F 및 시장 데이터 소스는 XXX의 Netflix, ICE, Visa, Mastercard, S&P Global, Alcon 신규 편입을 보도.": "Public 13F and market data sources reported XXX's new positions in Netflix, ICE, Visa, Mastercard, S&P Global, and Alcon.",
+      "공개 시장 데이터는 XXX의 Netflix, ICE, Visa, Mastercard, S&P Global, Alcon 신규 편입을 보도.": "Public market data reported XXX's new positions in Netflix, ICE, Visa, Mastercard, S&P Global, and Alcon.",
       "Risk Mode 64": "Risk Mode 64",
       "Risk Mode 60": "Risk Mode 60"
     };
@@ -1217,18 +1209,18 @@
     function applyLanguageStaticText() {
       document.documentElement.lang = currentLang;
       $("#languageBtn").textContent = currentLang === "ko" ? "EN" : "KO";
-      $("#subtitleText").textContent = t("분기별 13F 공시를 기반으로 공통 신규 매수, 전량 매도, 섹터 축소 이유, 현금/주식/원자재 가이드를 추적합니다.");
+      $("#subtitleText").textContent = t("선택된 하우스의 공통 신규 매수, 전량 매도, 섹터 축소 이유, 현금/주식/원자재 가이드를 추적합니다.");
       $("#factCheckBtn").textContent = t("팩트체크");
       $("#summaryCurrentTitle").textContent = t("현재 읽기");
-      $("#summaryCurrentText").textContent = t("Q2 13F는 AI/반도체와 퀄리티 금융으로 자금이 재강화된 흐름을 보여줍니다.");
+      $("#summaryCurrentText").textContent = t("Q2 분기 데이터는 AI/반도체와 퀄리티 금융으로 자금이 재강화된 흐름을 보여줍니다.");
       $("#summaryNextTitle").textContent = t("다음 확인");
-      $("#summaryNextText").textContent = t("Q3 13F에서 GOOGL, V/MA, SPGI/ICE, AI 반도체 매수가 반복되는지.");
+      $("#summaryNextText").textContent = t("Q3 분기 데이터에서 GOOGL, V/MA, SPGI/ICE, AI 반도체 매수가 반복되는지.");
       $("#summaryDefenseTitle").textContent = t("방어 장치");
       $("#summaryDefenseText").textContent = t("현금/단기채 10~20%, 금/원자재 5~10%를 변동성 완충재로 유지.");
       $("#overviewTitle").textContent = t("현재 판단");
       $("#cashBadge").textContent = t("현금 10~20% 유지");
       $("#factCheckTitle").textContent = t("팩트체크 로그");
-      $("#factCheckBadge").textContent = t("출처 확인 / 해석 분리");
+      $("#factCheckBadge").textContent = t("근거 확인 / 해석 분리");
       $("#calendarTitle").textContent = t("업데이트 캘린더");
       $("#calendarBadge").textContent = t("다음 핵심 체크: 2026년 11월 중순");
       const signalOptions = $("#signalFilter").options;
@@ -1343,8 +1335,8 @@
       };
       $("#tableTitle").textContent = titleMap[$("#signalFilter").value] || titleMap[activeView] || "공통 시그널";
       $("#tableMeta").textContent = currentLang === "ko"
-        ? `${rows.length}개 시그널 · 13F는 중기 자금 흐름으로 해석`
-        : `${rows.length}${t("개 시그널 · 13F는 중기 자금 흐름으로 해석")}`;
+        ? `${rows.length}개 시그널 · 분기 데이터는 중기 자금 흐름으로 해석`
+        : `${rows.length}${t("개 시그널 · 분기 데이터는 중기 자금 흐름으로 해석")}`;
       renderPriceMeta();
       $("#tableHead").innerHTML = `
         <tr>
@@ -1387,7 +1379,7 @@
     }
 
     function renderMovementBasis(row) {
-      return t(row.basis || "13F 보유 기준: 2026-03-31<br>공시 확인: 2026-05-15 전후");
+      return t(row.basis || "보유 기준: 2026-03-31<br>공시 확인: 2026-05-15 전후");
     }
 
     function renderPriceMeta() {
@@ -1521,9 +1513,7 @@
           <td>${t(row.caveat)}</td>
         </tr>
       `).join("");
-      $("#factCheckSources").innerHTML = dashboard.sources.map(source => `
-        <a href="${source.url}" target="_blank" rel="noreferrer">${source.name}</a>
-      `).join("");
+      $("#factCheckSources").innerHTML = "";
     }
 
     function bindFactCheck() {
