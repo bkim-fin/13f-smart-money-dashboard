@@ -1,4 +1,4 @@
-# Mac mini로 13F 대시보드 배포하기
+# Mac mini로 대시보드 배포하기
 
 이 대시보드는 정적 HTML 파일 하나라서 서버 구성이 가볍습니다.
 
@@ -7,14 +7,14 @@
 가격 그래프 자동 업데이트를 쓰려면 한 번만 설치합니다.
 
 ```bash
-cd /Users/bora/Documents/Codex/2026-06-08/role-sec-13f-context-13f-13f/outputs
+cd /path/to/dashboard/outputs
 ./install_yfinance.sh
 ```
 
 터미널에서 아래를 실행합니다.
 
 ```bash
-cd /Users/bora/Documents/Codex/2026-06-08/role-sec-13f-context-13f-13f/outputs
+cd /path/to/dashboard/outputs
 PORT=8080 ./serve_dashboard.sh
 ```
 
@@ -45,7 +45,7 @@ ipconfig getifaddr en0
 개념:
 
 ```text
-방문자 → Cloudflare 주소 → Cloudflare Tunnel → 맥미니:8080 → 13F 대시보드
+방문자 → Cloudflare 주소 → Cloudflare Tunnel → 맥미니:8080 → 대시보드
 ```
 
 흐름:
@@ -97,7 +97,7 @@ ipconfig getifaddr en0
 - 가격 데이터 위치 유지: `outputs/prices.json`
 - 가격 자동 업데이트: `serve_dashboard.sh` 실행 중 `yfinance`가 설치되어 있으면 1시간마다 갱신
 - 민감정보 금지: 계좌, 보유 수량, 개인 매수가 입력 금지
-- 업데이트 주기: 13F 시즌에는 분기 1회, 시장 점검은 주간/월간
+- 업데이트 주기: 분기 데이터 시즌에는 분기 1회, 시장 점검은 주간/월간
 
 ## 5. 권장 운영 구조
 

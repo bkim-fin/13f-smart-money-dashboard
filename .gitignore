@@ -1,4 +1,6 @@
 outputs/.venv/
 outputs/__pycache__/
+outputs/13f_dashboard_humblytics_sample.html
+work/
 work/private/
 .DS_Store
